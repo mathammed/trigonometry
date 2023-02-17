@@ -4,7 +4,7 @@ const { scene } = App.setup()
 
 const vertices = []
 
-for ( let x = -2; x <= 2; x += 0.25 ) {
+for ( let x = -2; x <= 2; x += 0.1 ) {
 
 	vertices.push( x, 0, 0 ) // x, y, z
 }
