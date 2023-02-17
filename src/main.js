@@ -2,11 +2,11 @@ import * as App from "./app"
 
 const { scene } = App.setup()
 
-const vertices = [
-//	x,	y,	z
-	-2,	0,	0,	// point 1
-	0,	0,	0,	// point 2
-	2,	0,	0,	// point 3
-]
+const vertices = []
 
-scene.add( App.drawPoints( vertices, 0x0000ff ) ) // all points are blue
+for ( let x = -2; x <= 2; x += 0.25 ) {
+
+	vertices.push( x, 0, 0 ) // x, y, z
+}
+
+scene.add( App.drawPoints( vertices, 0x0000ff ) )
