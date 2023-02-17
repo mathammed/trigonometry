@@ -6,7 +6,7 @@ const vertices = []
 
 for ( let d = 1; d <= 5; d++ ) {
 
-	vertices.push( Math.cos( d ), 0, 0 )
+	vertices.push( 0, Math.sin( d ), 0 )
 }
 
 scene.add( App.drawPoints( vertices, 0xffffff ) )
