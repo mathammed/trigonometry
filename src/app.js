@@ -51,12 +51,23 @@ function drawPoints( vertices, color ) {
 	const geometry = new THREE.BufferGeometry()
 	geometry.setAttribute( "position", new THREE.Float32BufferAttribute( vertices, 3 ) )
 
-	const material = new THREE.PointsMaterial( { size: 0.5, color, } )
+	const material = new THREE.PointsMaterial( { size: 0.25, color, } )
 
 	return new THREE.Points( geometry, material )
+}
+
+function drawLine( vertices, color ) {
+
+	const geometry = new THREE.BufferGeometry()
+	geometry.setAttribute( "position", new THREE.Float32BufferAttribute( vertices, 3 ) )
+
+	const material = new THREE.LineBasicMaterial( { color, } )
+
+	return new THREE.Line( geometry, material )
 }
 
 export {
 	setup,
 	drawPoints,
+	drawLine,
 }
