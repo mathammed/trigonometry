@@ -4,7 +4,7 @@ const { scene } = App.setup()
 
 const vertices = []
 
-for ( let d = 1; d <= 5; d++ ) {
+for ( let d = 1; d <= 45; d++ ) {
 
 	vertices.push( Math.cos( d ), Math.sin( d ), 0 )
 }
