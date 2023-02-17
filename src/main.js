@@ -4,26 +4,9 @@ const { scene } = App.setup()
 
 const vertices = []
 
-for ( let x = -2; x <= 2; x += 1 ) {
+for ( let d = 1; d <= 5; d++ ) {
 
-	if ( x < 0 ) {
-
-		// LEFT from ORIGIN
-
-		vertices.push( x, -1, 0 ) // x, y, z
-	}
-	else if ( x > 0 ) {
-
-		// RIGHT from ORIGIN
-
-		vertices.push( x, 1, 0 ) // x, y, z
-	}
-	else {
-
-		// CENTER
-
-		vertices.push( 0, 0, 0 ) // x, y, z
-	}
+	vertices.push( Math.cos( d ), 0, 0 )
 }
 
 scene.add( App.drawPoints( vertices, 0xffffff ) )
